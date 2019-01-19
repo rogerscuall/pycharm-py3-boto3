@@ -1,0 +1,14 @@
+version: "3.2"
+services:
+  python:
+    image: pycharm-py3.4-boto3:v0.1
+    volumes:
+      - type: bind
+        source: $PWD
+        target: /opt/project
+    networks:
+      - simple
+networks:
+  simple:
+    external:
+      name: simple
